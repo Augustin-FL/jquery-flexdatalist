@@ -1477,6 +1477,7 @@ jQuery.fn.flexdatalist = function (_option, _value) {
                     keyword = $alias.val();
 
                 text = text.split('{keyword}').join(keyword);
+                text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
                 $('<li>')
                     .addClass('item no-results')
                     .append(text)
